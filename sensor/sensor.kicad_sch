@@ -1744,7 +1744,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 176.022 97.79 90)
 			(effects
 				(font
@@ -2067,7 +2067,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "sensor:SHT31_breakout"
 			(at 186.69 68.58 0)
 			(effects
 				(font
@@ -2277,7 +2277,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 189.23 92.71 0)
 			(effects
 				(font

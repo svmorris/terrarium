@@ -1,0 +1,22 @@
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            pinmux = <I2C0_SDA_GPIO8>, <I2C0_SCL_GPIO9>;
+            bias-pull-up;
+            drive-open-drain;
+            output-high;
+        };
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_FAST>;
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-names = "default";
+
+    sht3x: sht3x@44 {
+        compatible = "sensirion,sht3xd";
+        reg = <0x44>;
+    };
+};
