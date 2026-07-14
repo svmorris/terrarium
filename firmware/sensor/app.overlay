@@ -1,3 +1,22 @@
+
+/ {
+    mist: mist {
+        compatible = "gpio-leds";
+        mist_pin: mist_pin {
+            gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    fan: fan {
+        compatible = "gpio-leds";
+        fan_pin: fan_pin {
+            gpios = <&gpio0 1 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};
+
+
+
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {

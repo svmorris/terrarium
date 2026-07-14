@@ -28,7 +28,7 @@ static double decode_double_le(const uint8_t *in);
 static bool ad_parse_cb(struct bt_data *data, void *user_data);
 static void scan_cb (const bt_addr_le_t *addr, int8_t rssi, uint8_t adv_type, struct net_buf_simple *buf);
 
-const struct device *const usbdevce = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
+/* const struct device *const usbdevce = DEVICE_DT_GET(DT_CHOSEN(zephyr_console)); */
 
 #define SENS_ADDR_STR "de:ad:be:ef:00:01"
 #define MFG_ID 0xffff
@@ -38,16 +38,16 @@ const struct device *const usbdevce = DEVICE_DT_GET(DT_CHOSEN(zephyr_console));
 int main(void)
 {
     int err;
-    uint32_t dtr = 0;
+    /* uint32_t dtr = 0; */
     bt_addr_le_t sens_addr;
 
 
-    while (!dtr) {
-        uart_line_ctrl_get(usbdevce, UART_LINE_CTRL_DTR, &dtr);
-        k_sleep(K_MSEC(100));
-    }
+    /* while (!dtr) { */
+    /*     uart_line_ctrl_get(usbdevce, UART_LINE_CTRL_DTR, &dtr); */
+    /*     k_sleep(K_MSEC(100)); */
+    /* } */
 
-    LOG_INF("USB setup successfully!");
+    /* LOG_INF("USB setup successfully!"); */
 
     if ((err = bt_enable(NULL)))
     {
